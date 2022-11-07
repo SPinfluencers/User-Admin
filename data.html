@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/data.css">
+    <link rel="stylesheet" href="./styles/index.css">
+    <script src="https://kit.fontawesome.com/59343e980a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav>
+        <div id="logo"><a href="#">Masai Admin</a></div>
+        <div>
+            <ul>
+                <li><a href="./login.html">Login</a></li>
+                <li><a href="./data.html">Data</a></li>
+                <li><a href="./reports.html">Reports</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="newfeatures">
+        <select id="filter" onchange="Filter(e)">
+          <option selected="true" disabled="disabled" value="">
+            Select batch_name
+          </option>
+          <option value="web-16">Web-16</option>
+          <option value="web-17">Web-17</option>
+          <option value="web-18">Web-18</option>
+          <option value="web-19">Web-19</option>
+          <option value="web-20">Web-20</option>
+        </select>
+  
+        <select id="Pricesort" onchange="Pricesort()">
+          <option selected="true" disabled="disabled" value="">
+            Select Age
+          </option>
+          <option value="desc">High to Low</option>
+          <option value="asc">Low to High</option>
+        </select>
+        <input type="text" placeholder="search" class="query" />
+        <button id="enter" onclick="serachQuery(e)">Search</button>
+      </div>
+
+      <div id="container"></div>
+      
+      <div class="editp">
+        <div class="edit_sec">
+          <form action="" onsubmit="handleEdit(event)">
+            <label for="name">Name</label>
+            <input type="text" name="name"/> 
+  
+            <label for="age">Age</label>
+            <input type="text" name="age"/> 
+  
+  
+            <label for="place">place</label>
+            <input type="text" name="place"/> 
+  
+            <label for="profession">profession</label>
+            <input type="text" name="profession"/> 
+  
+            <label for="batch_name">batch_name</label>
+            <input type="text" name="batch_name"/> 
+  
+           <input type="submit" id="submit">
+           
+          </form>
+        </div>
+      </div>
+</body>
+</html>
+<script src="./script/data.js"></script>

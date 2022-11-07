@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/index.css">
+</head>
+<style>
+    table{
+width: 70%;
+margin: auto;
+margin-top:2rem ;
+text-align: center;
+}
+table th{
+    background-color:teal;
+    color: aliceblue;
+    padding: 15px;
+}
+table td{
+    padding: 15px;
+    border: 1px solid;
+    font-size: 22px;
+}
+</style>
+<body>
+    <nav>
+        <div id="logo"><a href="./index.html">Masai Admin</a></div>
+        <div>
+            <ul>
+                <li><a href="./login.html">Login</a></li>
+                <li><a href="./data.html">Data</a></li>
+                <li><a href="./reports.html">Reports</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <table>
+        <tr>
+          <th>Total number of guests attending.</th>
+          <th>Number of students attending.</th>
+          <th>Number of working professional attending.</th>
+        </tr>
+        <tbody class="appendEmp"></tbody>
+      </table>
+
+</body>
+</html>
+
+<script src="./script/reports.js"></script>

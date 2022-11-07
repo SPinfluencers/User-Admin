@@ -1,0 +1,43 @@
+#container{
+    width: 80%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+#container>img{
+    width: 100px;
+}
+
+#container>div{
+    border-radius: 8px;
+    box-shadow: 1px 1px 11px 1px rgb(207, 205, 205);
+    text-align: center;
+    padding: 13px;
+}
+
+.editp input {
+    margin-bottom: 12px;
+    height: 55px;
+    font-size: larger;
+    position: relative;
+    width: 100%;
+  }
+
+  .edit_sec {
+    background-color: rgb(122, 117, 117);
+    padding: 25px;
+    margin: 5px;
+    display: none;
+    position: absolute;
+    width: 550px;
+    height: 550px;
+    top: 20px;
+    left: 80px;
+    
+  }

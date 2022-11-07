@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Section</title>
+    <link rel="stylesheet" href="./styles/user.css">
+</head>
+<body>
+    <div id="form">
+           <form action="" onsubmit="registration(event)">
+               <span id="errormsg"></span>
+               <div>
+                <label for="name">Name</label>
+                <input type="text" name="name" placeholder="Enter Name" required />
+               </div>
+               <div>
+                <label for="age">Age</label>
+                <input type="number" name="age" placeholder="Enter Age" required />
+               </div>
+               <div>
+                <label for="place">Place</label>
+                <input type="text" name="place" placeholder="Enter Place" required />
+               </div>
+               <div>
+                 <label for="batch">Batch</label>
+                 <select name="" id="batch">
+                    <option value="" disabled="disabled" selected="true">Batch</option>
+                    <option value="web-16">Web-16</option>
+                    <option value="web-17">Web-17</option>
+                    <option value="web-18">Web-18</option>
+                    <option value="web-19">Web-19</option>
+                    <option value="web-20">Web-20</option>
+                 </select>
+               </div>
+               
+               <div>
+                <label for="profession">Profession</label>
+                <select name="" id="profession">
+                   <option value="" disabled="disabled" selected="true">Profession</option>
+                   <option value="FSD">FSD</option>
+                   <option value="frontend">Frontend</option>
+                   <option value="backend">Backend</option>
+                   <option value="student">Student</option>
+                </select>
+              </div>
+               <input type="submit" value="Submit" id="submit"/>
+           </form>
+    </div>
+</body>
+</html>
+<script src="./script/user.js"></script>

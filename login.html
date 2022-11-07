@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="./styles/user.css">
+</head>
+<body>
+    <nav>
+        <div id="logo"><a href="#">Masai Admin</a></div>
+        <div>
+            <ul>
+                <li><a href="./login.html">Login</a></li>
+                <li><a href="./data.html">Data</a></li>
+                <li><a href="./reports.html">Reports</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div id="form">
+        <form onsubmit="login(event)">
+          <span id="errormsg"></span>
+          <div>
+            <label for="email">Email</label>
+            <input type="email" placeholder="Enter email"  name="email" required />
+          </div>
+          <div>
+            <label for="password">Password</label>
+            <input type="password" placeholder="Enter password"  name="password" required />
+          </div>
+          <input type="submit" id="submit" value="Submit"/>
+        </form>
+</body>
+</html>
+<script src="./script/login.js"></script>

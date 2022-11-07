@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Edit page</h1>
+    <div class="edit_section">
+        <form action="" onsubmit="handleEdit(event)">
+          <label for="name">Name</label>
+          <input type="text" name="name" />
+  
+          <label for="age">Age</label>
+          <input type="text" name="age" />
+  
+          <label for="place">place</label>
+          <input type="text" name="place" />
+  
+          <label for="profession">profession</label>
+          <input type="text" name="profession" />
+  
+          <label for="batch_name">batch_name</label>
+          <input type="text" name="batch_name" />
+  
+          <input type="submit" />
+          <button onclick="handleback()">Back</button>
+        </form>
+      </div>
+</body>
+</html>
+<script>
+      function handleback() {
+    window.location.href = "data.html";
+  }
+  let localData = JSON.parse(localStorage.getItem("user"));
+  let idof = localData.id;
+  function handleEdit(e) {
+    e.preventDefault();
+    let form = document.querySelector("form");
+    let name = form.name.value || localData.name;
+    let age = form.age.value || localData.age;
+    let place = form.place.value || localData.place;
+    let profession = form.profession.value || localData.profession;
+    let batch_name = form.batch_name.value || localData.batch_name;
+
+    fetch(`https://floating-crag-24295.herokuapp.com/users/${idof}`, {
+      method: "PATCH",
+      mode: "cors",
+      body: JSON.stringify({
+        name,
+        age,
+        place,
+        profession,
+        batch_name,
+      }),
+      headers: {
+        "Content-type": "application/json; charset=UTF-8",
+      },
+    })
+      .then((res) => res.json())
+      .then((res) => {
+        if (res !== "") {
+          alert("Save Data!");
+          window.location.href = "data.html";
+        }
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }
+</script>
